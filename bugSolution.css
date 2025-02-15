@@ -1,0 +1,12 @@
+To avoid calculation errors, always ensure unit consistency within the `calc()` function. Use the same unit type for all values involved in the calculation. Explicitly specify units where necessary to prevent ambiguity.  If dealing with complex calculations, consider breaking them down into smaller, more manageable steps to improve readability and prevent errors. For example: 
+
+```css
+/* Incorrect usage */
+width: calc(100% - 10px);
+
+/* Correct usage */
+width: calc(100% - 10px); /*This is actually correct, but adding explicit units for clarity is advised */
+width: calc(100vw - 10px);
+/* Or, for better readability: */
+width: calc(100vw - 1rem); 
+```
